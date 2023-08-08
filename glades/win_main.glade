@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
+<!--Generated with glade3 3.0.2 on Mon Jan 15 22:45:15 2007 by knj@kasper-->
+<glade-interface>
+  <widget class="GtkWindow" id="window">
+    <property name="title" translatable="yes">knj Renamer</property>
+    <property name="window_position">GTK_WIN_POS_CENTER</property>
+    <property name="default_width">400</property>
+    <property name="default_height">400</property>
+    <property name="icon">.</property>
+    <signal name="destroy" handler="CloseWindow"/>
+    <child>
+      <widget class="GtkVBox" id="vbox1">
+        <property name="visible">True</property>
+        <property name="border_width">4</property>
+        <child>
+          <widget class="GtkHBox" id="hbox1">
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkLabel" id="label1">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Dir:</property>
+                <property name="ellipsize">PANGO_ELLIPSIZE_START</property>
+                <property name="width_chars">14</property>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkFileChooserButton" id="fc_dir">
+                <property name="action">GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER</property>
+                <property name="visible">True</property>
+                <property name="width_chars">0</property>
+                <signal name="selection_changed" handler="DirChoose"/>
+              </widget>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkHBox" id="hbox2">
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkLabel" id="label2">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Replace from:</property>
+                <property name="ellipsize">PANGO_ELLIPSIZE_START</property>
+                <property name="width_chars">14</property>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkEntry" id="tex_replace_from">
+                <property name="visible">True</property>
+              </widget>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkHBox" id="hbox3">
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkLabel" id="label3">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Replace to:</property>
+                <property name="ellipsize">PANGO_ELLIPSIZE_START</property>
+                <property name="width_chars">14</property>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkEntry" id="tex_replace_to">
+                <property name="visible">True</property>
+              </widget>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkButton" id="but_replace">
+            <property name="visible">True</property>
+            <property name="border_width">4</property>
+            <property name="label" translatable="yes">Replace</property>
+            <property name="response_id">-2</property>
+            <signal name="pressed" handler="ReplaceClicked"/>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkScrolledWindow" id="scrolledwindow1">
+            <property name="visible">True</property>
+            <property name="hscrollbar_policy">GTK_POLICY_NEVER</property>
+            <child>
+              <widget class="GtkTreeView" id="tv_files">
+                <property name="visible">True</property>
+                <property name="enable_grid_lines">GTK_TREE_VIEW_GRID_LINES_HORIZONTAL</property>
+                <property name="enable_tree_lines">True</property>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="position">4</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>
